@@ -28,6 +28,7 @@ int main(){
     }cout<<endl;
     cout<<"Highest score: "<<h<<endl;
     cout<<"Lowest score: "<<l<<endl;
+    cout<<"Students who scored above average:"
     return 0;
     
 }

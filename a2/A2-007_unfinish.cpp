@@ -3,8 +3,8 @@
 using namespace std ;
 int main(){
 int n,m;
-int i;
-vector<int> a,b,a1,a2,w;
+int i,a,b;
+vector<int> a1,a2,w;
 cin>>n>>m;
 for(i=0;i<=n;i++){  //input x begin
 cin>>a;
@@ -16,13 +16,17 @@ a2.push_back(a);
 }for(i=0;i<=m;i++){ // want bucked
 cin>>b;
 w.push_back(a);
-}int i,nb;
-bool foud= false;
-for(i=0;i<n;i++){
-    for(int j=0;j<want.size();j++){
-    if(a1[i]>=a1[w[j]]&&a2[i]<=a2[w[j]]){
-     
-     foud=false;
+}int nb;
+bool isfoud[n]=false;
+while(true){
+    int bt=-1;
+    int max=0;
+    int min = 500000;
+    for(int i=0;i<=n;i++){
+        int cout =0;
+        for()
+    if(){
+     cout+=1
     }
         
     }

@@ -1,49 +1,59 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<iomanip>
 using namespace std;
 int main(){
-int n;cin>>n;
-vector<int> b2,b8,b12;
-int x=n;
-int y=n;
-int z=n;
-if(n==0){
-	cout<<0<<endl<<0<<endl<<0;       
-}
-while(x>0){
-	if(x%2==0){
-		b2.push_back(0);
-	}
-	else{
-		b2.push_back(1);
-	}
-	x=x/2;
-}reverse(b2.begin(),b2.end());
-while(y>0){
-	b8.push_back(y%8);
-	y=y/8;
-}reverse(b8.begin(),b8.end());
- while(z>0){
-        if(z%16<10){
-          int c='0'+(z%16);
-            b12.push_back(c);
-        }else{
-          int c='A'+(z%16-10);
-          b12.push_back(c);
-        }
-        z=z/16;
+    int n,in,i;
+    vector <int> s,p;
+    cin>>n;
+      if(n==0){
+          for(i=0;i<n;i++){
+        cin>>in;
+        s.push_back(in);
     }
-    reverse(b12.begin(),b12.end());
-int i;
-for(i=0;i<b2.size();i++){
-   cout<<b2[i];	
-}cout<<endl;
-for(i=0;i<b8.size();i++){
-   cout<<b8[i];	
-}cout<<endl;
-for(i=0;i<b12.size();i++){
-      cout<<char(b12[i]);
-}
-return 0 ;
+        cout<<"Student: "<<endl;
+        cout<<"Highest score: "<<0<<endl;
+        cout<<"Lowest score: "<<0<<endl;
+        cout<<"Average score: "<<0.0<<endl;
+        cout<<"Student who scored above average:"<<endl;
+    
+          return 0;
+      }
+  
+    if(n!=0){
+        for(i=0;i<n;i++){
+        cin>>in;
+        s.push_back(in);
+    }
+        float anum=0;
+        for(i=0;i<s.size();i++){
+         anum=anum+s[i];
+    }float a=anum/n;
+    for(i=0;i<s.size();i++){
+        if(s[i]>a){
+            p.push_back(i+1);
+        }
+    }
+    sort(s.begin(),s.end());
+    int l=s[0];
+    sort(s.rbegin(),s.rend());
+    int h=s[0];
+        cout<<"Student:";
+        for(i=1;i<=n;i++){
+        cout<<" Student"<<i;
+        }cout<<endl;
+    cout<<"Highest score: "<<h<<endl;
+    cout<<"Lowest score: "<<l<<endl;
+    cout<<fixed<<setprecision(1) ;
+    cout<<"Average score: "<<a<<endl;
+    cout<<"Students who scored above average:"<<endl;
+    for(i=0;i<p.size();i++){
+        cout<<"Student "<<p[i]<<endl;
+    }
+    }
+    
+    return 0;
+    
+    
 }

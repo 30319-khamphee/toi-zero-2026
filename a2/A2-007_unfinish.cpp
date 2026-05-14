@@ -44,7 +44,7 @@ while(true){
 				min=b[i]-a[i];
 			}
 		}
-    }
+ ฟ2,,,   }
     if(best==1) break;
     
 }
